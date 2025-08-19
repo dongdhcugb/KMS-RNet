@@ -1,0 +1,19 @@
+# arguments for dataset
+dataset: cityscapes
+nclass: 2
+crop_size: 512
+data_root: splits/cityscapes
+
+# arguments for training
+epochs: 50
+batch_size: 2
+lr: 0.000625
+lr_multi: 1.0
+
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.95
+
+
